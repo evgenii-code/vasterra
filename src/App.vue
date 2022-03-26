@@ -1,26 +1,62 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="app">
+    <cards-list class="app__cards-list" :list-items="populatedSolutions">
+      <template #title
+        >Solve your business problems with excellent web solutions</template
+      >
+    </cards-list>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import CardsList from './components/CardsList.vue';
+import solutions from './data/solutions.json';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld,
+    CardsList,
+  },
+
+  data() {
+    return {
+      solutions,
+    };
+  },
+
+  computed: {
+    populatedSolutions() {
+      return this.solutions.map((solution) => ({
+        ...solution,
+        images: {
+          regular: this.getFilePath(solution.image_name, '@1x'),
+          large: this.getFilePath(solution.image_name, '@2x'),
+        },
+      }));
+    },
+  },
+
+  methods: {
+    getFilePath(name, size = '@1x') {
+      return `/images/${name}${size}.jpg`;
+    },
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "./scss/utils/toRem";
+@import "./scss/index.scss";
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__cards-list {
+    margin: auto 0;
+    padding: toRem(60px) 0;
+  }
 }
 </style>

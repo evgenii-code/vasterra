@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Websites",
+    "text": "Create a stunning website or blog page for your business with WordPress, Drupal or Joomla.",
+    "image_name": "websites"
+  },
+  {
+    "id": 2,
+    "title": "E-commerce stores",
+    "text": "Build your e-commerce store on platforms like Shopify or create a custom webshop according to your needs.",
+    "image_name": "e-commerce"
+  },
+  {
+    "id": 3,
+    "title": "E-learning systems",
+    "text": "Educate users or employees with a tailor-made education system that can support courses. ",
+    "image_name": "e-learning"
+  },
+  {
+    "id": 4,
+    "title": "Web portals",
+    "text": "Connect your business with customers through a well-designed web portal.",
+    "image_name": "web-portals"
+  },
+  {
+    "id": 5,
+    "title": "Progressive web apps (PWA)",
+    "text": "Create web apps that will work spectacularly on both desktop and mobile.",
+    "image_name": "pwa"
+  },
+  {
+    "id": 6,
+    "title": "Custom web applications",
+    "text": "We can analyze your needs and suggest a custom web solution that is perfectly suited to what you require.",
+    "image_name": "custom"
+  }
+]
