@@ -39,7 +39,7 @@ export default {
 
   methods: {
     getFilePath(name, size = '@1x') {
-      return `/images/${name}${size}.jpg`;
+      return `./images/${name}${size}.jpg`;
     },
   },
 };
